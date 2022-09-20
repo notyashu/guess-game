@@ -10,7 +10,7 @@
 
 <body>
     <div class="name-container text-right d-flex flex-row justify-content-end">
-        <h1 class="name-heading p-3">Swaroop Guessing Game</h1>
+        <h1 class="name-heading p-3">Suryansh Guessing Game</h1>
     </div>
     <div class="container-fluid bg-container">
         <div class="row bg-white">
@@ -29,10 +29,22 @@
                 </h1>
                 <input type="text" class="user-input" id="userInput" />
                 <div>
-                    <button class="btn btn-info check-guess" onclick="checkGuess()">
+                    <button id="btn1"class="btn btn-info check-guess" onclick="checkGuess();counter();" >
                         Check
                     </button>
                 </div>
+                  <p>
+        Button Clicked <span 
+        id="display">0</span> Times
+    </p>
+  
+    <script type="text/javascript">
+        var count = 0;
+        var btn = document.getElementById("btn1");
+        var disp = document.getElementById("display");
+  
+        btn.onclick = counter()
+    </script>
                 <p class="game-result" id="gameResult"></p>
             </div>
         </div>
