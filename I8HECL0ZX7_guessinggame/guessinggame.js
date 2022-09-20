@@ -2,6 +2,11 @@ let gameResult = document.getElementById("gameResult");
 let userInput = document.getElementById("userInput");
 let randomNumber = Math.ceil(Math.random() * 100);
 
+function counter(){
+  
+          count++;
+          disp.innerHTML = count;
+}
 function checkGuess() {
     let guessedNumber = parseInt(userInput.value);
     if (guessedNumber > randomNumber) {
@@ -14,7 +19,7 @@ function checkGuess() {
         gameResult.textContent = "Congractulations! You Got it Right!";
         gameResult.style.backgroundColor = "green";
     } else {
-        gameResult.textContent = "Please Provide a VAlid Input";
+        gameResult.textContent = "Please Provide a Valid Input";
         gameResult.style.color = "red";
     }
 }
